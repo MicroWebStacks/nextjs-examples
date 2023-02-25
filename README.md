@@ -30,3 +30,13 @@ shared global var demo. reload the page to increment the counter. All pages shar
 * using `getServerSideProps()` to execute code on server side
 * same page code executes twice one on server, once on client, except `getServerSideProps()` is ignored on client and so are ignored all of its related imports
 
+## vercel deployment
+* https://ssr-counter.vercel.app/
+
+# More Nextjs examples
+
+## Next MDX ToC
+remote mdx with in memory rehype plugins for generation of ToC. Using React components inside MDX
+
+* https://github.com/MicroWebStacks/next_mdx_toc
+
