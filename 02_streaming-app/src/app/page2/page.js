@@ -7,7 +7,7 @@ console.log("Hello from page2 body")
 export default function Page2() {
   const proj = "02_streaming-app"
 
-  console.log("Hello from home page2 function")
+  console.log("Hello from page2 function")
   return (
     <main className={styles.main}>
       <div className={styles.description}>

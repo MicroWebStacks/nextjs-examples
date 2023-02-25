@@ -15,14 +15,49 @@ a sample set of basic patterns for nextjs evaluation and benchmarking
 ## vercel deployment
 * https://basic-static.vercel.app/
 
+## lifecycle log
+* during build
+```log
+Hello from home page body
+Hello from page2 body
+Hello from page2 getStaticProps 'on build time'
+Hello from home page function
+Hello from page2 function
+```
+* in the browser on home load
+```log
+Hello from home page body
+Hello from home page function
+```
+* on page 2 link hover
+```log
+Hello from page2 body
+```
+* on click page 2 load
+```log
+Hello from page 2 function
+```
+
 # 02_streaming-app
 
 * using the new beta feature app directory
+* All components in app are `React Server Components`
 
 https://nextjs.org/docs/advanced-features/react-18/streaming
 https://nextjs.org/docs/advanced-features/react-18/server-components
 https://beta.nextjs.org/docs/upgrade-guide
 
+## lifecycle log
+* build
+```log
+Hello from page2 body
+Hello from page2 body
+Hello from home page function
+Hello from page2 function
+Hello from home page function
+Hello from page2 function
+```
+* on fetching all pages : No log output, neither on the server nor on the browser
 # 03_ssr-counter
 
 shared global var demo. reload the page to increment the counter. All pages share the same counter
@@ -32,6 +67,13 @@ shared global var demo. reload the page to increment the counter. All pages shar
 
 ## vercel deployment
 * https://ssr-counter.vercel.app/
+
+# 04_server-cookie-counter
+
+Work In Progress
+
+* using `src/app`
+* using `cookies()` `next/headers` but only has get, set not yet available. https://beta.nextjs.org/docs/api-reference/cookies#good-to-know
 
 # More Nextjs examples
 

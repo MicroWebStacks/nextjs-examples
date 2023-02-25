@@ -1,13 +1,31 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link'
+import { cookies } from 'next/headers'
+import { fileURLToPath } from 'url';
+import { basename,dirname } from 'node:path';
 
-console.log("Hello from home page body")
+
+const __filename = fileURLToPath(import.meta.url);
+const proj = basename(dirname(dirname(dirname(__filename))))
+
+console.log(`Hello from home page body in proj ${proj}`)
 
 export default function Home() {
-  const proj = "02_streaming-app"
 
   console.log("Hello from home page function")
+
+  let counter = 0
+  const nextCookies = cookies()
+  if(nextCookies.has("counter")){
+    const cookie = nextCookies.get("counter")
+    counter = cookie.number() + 1
+    console.log(`  cookie exist +1 now set to (${counter})`)
+  }else{
+    console.log("  cookie does not exist starting from 0")
+  }
+  //set() does not exist yet
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -28,9 +46,6 @@ export default function Home() {
           <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
         </div>
 
-      </div>
-      <div className={styles.center}>
-        <Link href="/page2" prefetch={false} >page2</Link>
       </div>
     </main>
   )

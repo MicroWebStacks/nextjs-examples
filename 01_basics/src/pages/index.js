@@ -30,7 +30,7 @@ export default function Home() {
 
       </div>
       <div className={styles.center}>
-        <Link href="/static_json" prefetch={false} >page2</Link>
+        <Link href="/page2" prefetch={false} >page2</Link>
       </div>
     </main>
   )
