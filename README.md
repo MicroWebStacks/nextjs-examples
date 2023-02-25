@@ -43,6 +43,8 @@ Hello from page 2 function
 * using the new beta feature app directory
 * All components in app are `React Server Components`
 
+https://beta.nextjs.org/docs
+https://app-dir.vercel.app/
 https://nextjs.org/docs/advanced-features/react-18/streaming
 https://nextjs.org/docs/advanced-features/react-18/server-components
 https://beta.nextjs.org/docs/upgrade-guide
