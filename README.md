@@ -6,7 +6,7 @@ a sample set of basic patterns for nextjs evaluation and benchmarking
 * Nextjs now forbids full page refresh transitions : https://nextjs.org/docs/messages/no-html-link-for-pages
 * Next executes page 2 get static props even if the page is not called, a sort of prefetch
 * build requires to disable images optimization `images.unoptimized: true` in `next.config.js`
-* export in `out` does not run with vs code live server but runs with
+* export in `out` in addition to `next start`, does not run with vs code live server but runs with
     ```cmd
     python3 -m http.server 8000 --directory out
     ```

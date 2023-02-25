@@ -5,18 +5,16 @@ import Link from 'next/link'
 console.log("Hello from home page body")
 
 export default function Home() {
-  const name = "01_basics"
+  const proj = "01_basics"
 
   console.log("Hello from home page function")
   return (
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          Basic Next.js example&nbsp;
-          <code className={styles.code}>{name}</code>
-        </p>
+          <a href={`https://github.com/wassfila/nextjs-examples/tree/main/${proj}`} target="_blank">Project {proj} github repo</a>
+       </p>
       </div>
-
       <div className={styles.center}>
         <Image
           className={styles.logo}
