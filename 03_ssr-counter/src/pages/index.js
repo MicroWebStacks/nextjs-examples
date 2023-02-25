@@ -1,11 +1,12 @@
 import Image from 'next/image'
-import styles from './page.module.css'
+import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
+import { get_count, increment } from '../shared';
 
-console.log("Hello from page body")
+console.log("Hello from home page body")
 
-export default function Home() {
-  const proj = "02_streaming-app"
+export default function Home({counter}) {
+  const proj = "03_ssr-counter"
 
   console.log("Hello from home page function")
   return (
@@ -14,6 +15,9 @@ export default function Home() {
         <p>
           <a href={`https://github.com/wassfila/nextjs-examples/tree/main/${proj}`} target="_blank">Project {proj} github repo</a>
        </p>
+      </div>
+      <div className={styles.description}>
+        <p>counter = {counter}</p>
       </div>
       <div className={styles.center}>
         <Image
@@ -35,3 +39,14 @@ export default function Home() {
     </main>
   )
 }
+
+export async function getServerSideProps(context) {
+  increment()
+  const counter = get_count()
+  console.log("Hello from getServerSideProps()")
+
+  return {
+    props: {counter}, // will be passed to the page component as props
+  }
+}
+

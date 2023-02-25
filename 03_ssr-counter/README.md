@@ -1,6 +1,3 @@
-# nextjs-examples
-a sample set of basic patterns for nextjs evaluation and benchmarking
-
 # 01_basics
 
 * Nextjs no longer allows full page refresh transitions : https://nextjs.org/docs/messages/no-html-link-for-pages
@@ -14,19 +11,4 @@ a sample set of basic patterns for nextjs evaluation and benchmarking
 
 ## vercel deployment
 * https://basic-static.vercel.app/
-
-# 02_streaming-app
-
-* using the new beta feature app directory
-
-https://nextjs.org/docs/advanced-features/react-18/streaming
-https://nextjs.org/docs/advanced-features/react-18/server-components
-https://beta.nextjs.org/docs/upgrade-guide
-
-# 03_ssr-counter
-
-shared global var demo. reload the page to increment the counter. All pages share the same counter
-
-* using `getServerSideProps()` to execute code on server side
-* same page code executes twice one on server, once on client, except `getServerSideProps()` is ignored on client and so are ignored all of its related imports
 
