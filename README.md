@@ -12,3 +12,5 @@ a sample set of basic patterns for nextjs evaluation and benchmarking
     ```
 * `getStaticProps` is fetching the data on build time, but then result in needless refetch of the resulting json structure on every client page load. If that is an issue, it is necessary to fall back on client side load and caching. json Data is even loaded two times once on hover prefetch and then on Link click
 
+* vercel deployment : https://basic-static.vercel.app/
+
