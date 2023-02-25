@@ -1,26 +1,19 @@
 import Image from 'next/image'
-import styles from './page.module.css'
+import styles from '../page.module.css'
 import Link from 'next/link'
-import { get_count, increment } from './shared';
 
-console.log("Hello from page body")
+console.log("Hello from page2 body")
 
-increment()
-const current_count = get_count()
-
-export default function Home() {
+export default function Page2() {
   const proj = "02_streaming-app"
 
-  console.log("Hello from home page function")
+  console.log("Hello from home page2 function")
   return (
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
           <a href={`https://github.com/wassfila/nextjs-examples/tree/main/${proj}`} target="_blank">Project {proj} github repo</a>
        </p>
-      </div>
-      <div className={styles.description}>
-        <p>counter = {current_count}</p>
       </div>
       <div className={styles.center}>
         <Image
@@ -37,7 +30,7 @@ export default function Home() {
 
       </div>
       <div className={styles.center}>
-        <Link href="/page2" prefetch={false} >page2</Link>
+        <Link href="/" prefetch={false} >page</Link>
       </div>
     </main>
   )
