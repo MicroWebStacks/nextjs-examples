@@ -10,5 +10,27 @@
 * `getStaticProps` is fetching the data on build time, but then result in needless refetch of the resulting json structure on every client page load. If that is an issue, it is necessary to fall back on client side load and caching. json Data is even loaded two times once on hover prefetch and then on Link click
 
 ## vercel deployment
-* https://basic-static.vercel.app/
+* https://examples-basics.vercel.app/
 
+## lifecycle log
+* during build
+```log
+Hello from home page body
+Hello from page2 body
+Hello from page2 getStaticProps 'on build time'
+Hello from home page function
+Hello from page2 function
+```
+* in the browser on home load
+```log
+Hello from home page body
+Hello from home page function
+```
+* on page 2 link hover
+```log
+Hello from page2 body
+```
+* on click page 2 load
+```log
+Hello from page 2 function
+```
