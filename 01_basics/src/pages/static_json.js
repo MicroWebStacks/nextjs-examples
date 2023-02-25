@@ -11,7 +11,7 @@ export default function Home({name}) {
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          <a href={`https://github.com/wassfila/nextjs-examples/tree/main/${proj}`} target="_blank">Project {proj} github repo</a>
+          <a href={`https://github.com/MicroWebStacks/nextjs-examples/tree/main/${proj}`} target="_blank">Project {proj} github repo</a>
        </p>
       </div>
 
