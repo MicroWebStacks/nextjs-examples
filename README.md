@@ -1,6 +1,8 @@
 # nextjs-examples
 a sample set of basic patterns for nextjs evaluation and benchmarking
 
+* cloudflare redirections reload : https://github.com/cloudflare/next-on-pages/issues/70
+
 # 01_basics
 
 * Nextjs no longer allows full page refresh transitions : https://nextjs.org/docs/messages/no-html-link-for-pages
